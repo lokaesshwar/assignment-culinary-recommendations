@@ -3,7 +3,7 @@
 **Live Demo:** [https://assignment-culinary-recommendations.netlify.app/](https://assignment-culinary-recommendations.netlify.app/)
 
 
-![assignment-culinary-recommendations - Google Chrome 2025-10-16 01-09-08](https://github.com/user-attachments/assets/9fcf4340-c2b7-4e50-9824-b971ee559bda)
+![assignment-culinary-recommendations - Google Chrome 2025-10-16 01-09-08 (1)](https://github.com/user-attachments/assets/14090905-e75f-4570-a489-c6760e2a483f)
 
 ---
 
@@ -107,14 +107,7 @@ This design emphasizes **simplicity, usability, and performance**, aligning with
 
 ---
 
-## 🚀 Future Enhancements
 
-- 🧾 Integration of **image-based ingredient recognition** using TensorFlow.js or a Vision API.  
-- 🔍 Addition of **nutrition API** for live calorie calculation.  
-- 🤖 Improved recommendation ranking using **AI/ML models**.  
-- 💾 Option to **save favorite recipes** for registered users.  
-
----
 
 
 ## 🪪 License
