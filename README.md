@@ -1,168 +1,122 @@
-🍳 Smart Recipe Generator
+# 🍳 Smart Recipe Generator
 
-Live Demo: https://assignment-culinary-recommendations.netlify.app/
+**Live Demo:** [https://assignment-culinary-recommendations.netlify.app/](https://assignment-culinary-recommendations.netlify.app/)
 
 
-📖 Overview
+![assignment-culinary-recommendations - Google Chrome 2025-10-16 01-09-08](https://github.com/user-attachments/assets/9fcf4340-c2b7-4e50-9824-b971ee559bda)
 
-Smart Recipe Generator is a modern web application that helps users discover delicious recipes based on the ingredients they already have at home. It combines ingredient-based search, dietary filters, and AI-driven personalization to recommend healthy and relevant meal options.
+---
 
-This project was developed as part of the “Smart Recipe Generator” assignment, focusing on building a practical, user-friendly, and intelligent recipe suggestion engine.
+## 📖 Overview
 
-The app delivers a seamless, visually appealing, and responsive user experience — deployable on any modern browser and mobile device.
+**Smart Recipe Generator** is a responsive web application that recommends recipes based on the ingredients users have.  
+The app allows users to input ingredients, select dietary preferences, and instantly receive curated recipe suggestions that best match their inputs.
 
-🌟 Key Features (Assignment Requirements)
-Feature	Description	Status
-🥗 Ingredient Input	Users can enter or select available ingredients to get recipe suggestions.	✅ Implemented
-⚙️ Dietary Preferences	Supports filters like Vegetarian, Vegan, and Gluten-Free to refine results.	✅ Implemented
-🧠 Smart Recommendations	Suggests recipes based on match score between user inputs and recipe data.	✅ Implemented
-🍴 Recipe Details	Displays ingredients, steps, and basic nutritional info for each recipe.	✅ Implemented
-📱 Responsive Design	Built with Tailwind CSS for fully mobile-friendly UX.	✅ Implemented
-🧾 Data Source	Uses a structured JSON dataset with ≥ 20 recipes (modifiable & extendable).	✅ Implemented
-🧑‍🍳 Substitute Ingredients	Suggests alternatives if an ingredient is missing.	⚙️ Planned
-🧩 Image-based Ingredient Recognition	Placeholder for future ML integration (TensorFlow.js or Vision API).	⚙️ Planned
-💡 Motivation
+This project was developed as part of the *Smart Recipe Generator Assignment* given by **Unthinkable Solutions**, focusing on practical implementation of user-centric recommendation logic, clean UI design, and scalable front-end development.
 
-People often waste time searching for recipes that match what’s available in their kitchen. Smart Recipe Generator eliminates that friction — users simply enter what they have, and the app instantly returns suitable recipes filtered by diet and preference.
+---
 
-This project demonstrates the power of AI-aided recommendation logic combined with clean, intuitive UI/UX principles — making it both academically valuable and industry-relevant.
+## 🌟 Key Features
 
-🧰 Tech Stack
-Category	Technology
-Frontend Framework	React + TypeScript + Vite
-Styling	Tailwind CSS
-UI Components	shadcn/ui + Lucide Icons
-State Management	React Hooks (useState, useEffect)
-Routing	React Router DOM
-Deployment	Netlify
-Version Control	Git + GitHub
-🧑‍💻 How to Run Locally
-# 1️⃣ Clone the repository
+- 🥗 **Ingredient-Based Recommendations:** Suggests recipes based on entered ingredients.  
+- ⚙️ **Dietary Filters:** Supports Vegetarian, Vegan, and Gluten-Free preferences.  
+- 🍴 **Recipe Details:** Displays required ingredients, preparation steps, and nutritional details.  
+- 🧠 **Smart Matching Logic:** Calculates best matches using ingredient overlap.  
+- 📱 **Responsive UI:** Optimized for all devices using Tailwind CSS.  
+- ☁️ **Deployed on Netlify:** Easily accessible online without installation.  
+
+---
+
+## 🧰 Tech Stack
+
+- **Framework:** React + TypeScript + Vite  
+- **Styling:** Tailwind CSS  
+- **UI Components:** shadcn/ui & Lucide Icons  
+- **State Management:** React Hooks  
+- **Routing:** React Router DOM  
+- **Hosting:** Netlify  
+- **Version Control:** Git & GitHub  
+
+---
+
+## 🧑‍💻 How to Run Locally
+
+```bash
+# 1. Clone the repository
 git clone https://github.com/lokaesshwar/assignment-culinary-recommendations.git
 cd assignment-culinary-recommendations
 
-# 2️⃣ Install dependencies
+# 2. Install dependencies
 npm install
-# or
-yarn install
 
-# 3️⃣ Start the development server
+# 3. Start the development server
 npm run dev
-# or
-yarn dev
 
-# 4️⃣ Build for production
+# 4. Build for production
 npm run build
+```
 
+Then open **http://localhost:5173** in your browser.
 
-Then open http://localhost:5173
- (default Vite port) in your browser.
+---
 
-🗂️ Project Structure
+## 🗂️ Project Structure
+
+```
 assignment-culinary-recommendations/
 ├── src/
-│   ├── components/          # Reusable UI components (Buttons, Cards, Selectors)
-│   ├── pages/               # Main screens (Home, Results)
-│   ├── data/                # Recipe dataset (JSON)
-│   ├── assets/              # Icons & images
-│   ├── App.tsx              # Root component
-│   └── main.tsx             # Entry file
-├── public/                  # Static assets
+│   ├── components/      # Reusable UI components
+│   ├── pages/           # App pages (Home, Results)
+│   ├── data/            # Recipe dataset (JSON)
+│   ├── assets/          # Icons & images
+│   ├── App.tsx          # Root component
+│   └── main.tsx         # Entry point
+├── public/
 ├── package.json
 ├── tailwind.config.ts
 └── README.md
+```
 
-🧮 Approach (Summary – ~200 Words)
+---
 
-The Smart Recipe Generator applies a content-based filtering approach to match recipes to user inputs. Each recipe contains metadata such as ingredients, dietary category, preparation steps, and nutritional info. When the user enters ingredients, the system computes a similarity score for each recipe based on overlapping ingredients and dietary compatibility.
+## 🧮 Approach (Summary)
 
-The top-scoring recipes are displayed as recommendations. If certain ingredients are missing, the app highlights substitute suggestions or alternative recipes.
+The **Smart Recipe Generator** uses a **content-based filtering** method to recommend recipes.  
+When users enter ingredients and select dietary preferences, the app compares those inputs against the recipe dataset and calculates a match score. Recipes with the highest overlap are displayed as suggestions.
 
-For dietary filtering, each recipe is tagged as vegetarian, vegan, gluten-free, etc., allowing the algorithm to remove irrelevant options efficiently. The app is designed with scalable front-end architecture using React + TypeScript, ensuring type safety, modularity, and easy integration of future ML or API modules (e.g., TensorFlow.js for image recognition or a Nutrition API).
+Each recipe entry includes ingredients, instructions, diet type, and optional nutritional values.  
+The app’s front end is built with **React + TypeScript**, ensuring modularity, type safety, and future scalability. **Tailwind CSS** provides a responsive and modern layout, while **Netlify deployment** ensures easy access and fast performance.
 
-This design prioritizes user experience — minimal input, fast response, responsive layout, and elegant visuals — aligning with real-world usability standards and modern development practices.
+If certain ingredients are missing, the app highlights substitute suggestions or alternate recipes.  
+For dietary filtering, each recipe is tagged (e.g., Vegetarian, Vegan, Gluten-Free), allowing efficient filtering.  
+This design emphasizes **simplicity, usability, and performance**, aligning with real-world development standards.
 
-📊 Dataset Details
+---
 
-Number of Recipes: 20+
+## 📊 Dataset
 
-Data Source: Custom JSON file (src/data/recipes.json)
+- **Recipes:** 20+ curated recipes  
+- **Data Format:** Local JSON file (`/src/data/recipes.json`)  
 
-Attributes per Recipe:
+- **Attributes per Recipe:**  
+  - Name  
+  - Ingredients  
+  - Instructions  
+  - Diet Type  
+  - Optional Nutritional Data  
 
-id
+---
 
-title
+## 🚀 Future Enhancements
 
-ingredients
+- 🧾 Integration of **image-based ingredient recognition** using TensorFlow.js or a Vision API.  
+- 🔍 Addition of **nutrition API** for live calorie calculation.  
+- 🤖 Improved recommendation ranking using **AI/ML models**.  
+- 💾 Option to **save favorite recipes** for registered users.  
 
-instructions
+---
 
-dietType
 
-nutrition (optional)
+## 🪪 License
 
-Easily extendable by adding more entries in JSON or connecting to an external recipe API.
-
-📸 Screenshots
-Home Page	Recipe Results	Detailed View
-
-	
-	
-
-(Replace placeholders with actual screenshots from your app UI.)
-
-✅ Evaluation Checklist
-Criteria	Status
-Ingredient input working	✅
-Dietary preference filter functioning	✅
-Responsive design across devices	✅
-Minimum 20 recipes included	✅
-Proper error handling for invalid inputs	✅
-Optional nutritional details displayed	✅
-Clean, well-commented code	✅
-Hosted live demo accessible	✅
-Planned ML integration (future work)	⚙️
-🚀 Future Enhancements
-
-🔍 Integrate image-based ingredient detection using TensorFlow.js.
-
-🧾 Connect to external nutrition APIs for live calorie & macronutrient info.
-
-🤖 Improve recommendation logic using AI-driven personalization.
-
-💬 Add multilingual support for broader accessibility.
-
-🧡 Enable user accounts to save and rate favorite recipes.
-
-💬 Reflections & Learning
-
-This project strengthened my skills in:
-
-Front-end architecture (React + TypeScript)
-
-UX/UI design with Tailwind CSS
-
-Data-driven decision logic
-
-API & component integration
-
-Version control and Netlify deployment
-
-It also encouraged me to think beyond coding — focusing on usability, scalability, and adaptability, all of which are crucial for real-world software engineering.
-
-🧑‍🎓 Author
-
-👨‍💻 Lokaesshwar Sudhagar
-Front-End Developer | React | TypeScript | Java | Python
-
-🌐 Portfolio
- (add link if you have one)
-💼 LinkedIn
- (add your LinkedIn link)
-📧 Email: your.email@example.com
-
-🪪 License
-
-This project is released under the MIT License
-.
+This project is licensed under the **MIT License**.
